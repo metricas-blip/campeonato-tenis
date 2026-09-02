@@ -716,16 +716,17 @@ window.addEventListener('storage', () => {
   }
 });
  
-// Sincronização periódica a cada 2 segundos para garantir que dados são mostrados
-setInterval(() => {
-  const activeTab = document.querySelector('.tab-content.active');
-  if (activeTab && activeTab.id !== 'sorteio' && activeTab.id !== 'quadro') {
-    // Re-renderiza abas que mostram dados que podem mudar
-    if (activeTab.id === 'grupos') window.app.renderGrupos();
-    if (activeTab.id === 'jogos') window.app.renderJogos();
-    if (activeTab.id === 'partidas') window.app.renderPartidas();
+// Sincronização apenas quando a página está visível (não interfere com digitação)
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) {
+    const activeTab = document.querySelector('.tab-content.active');
+    if (activeTab && activeTab.id !== 'sorteio' && activeTab.id !== 'quadro') {
+      if (activeTab.id === 'grupos') window.app.renderGrupos();
+      if (activeTab.id === 'jogos') window.app.renderJogos();
+      if (activeTab.id === 'partidas') window.app.renderPartidas();
+    }
   }
-}, 2000);
+});
 </script>
  
 </body>
