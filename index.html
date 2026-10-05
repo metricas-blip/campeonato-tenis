@@ -25,6 +25,7 @@
     .alert-modal { margin-bottom: 12px; padding: 10px; border-radius: 6px; font-size: 13px; }
     .alert-error { background: #ffebee; color: #c62828; }
     .alert-success { background: #e8f5e9; color: #2e7d32; }
+    .alert-warn { background: #fff8e1; color: #8d6e00; border: 1px solid #ffe082; }
 
     /* Setup */
     .setup { max-width: 620px; margin: 30px auto; background: white; border: 1px solid #ddd; border-radius: 12px; padding: 28px; }
@@ -97,27 +98,29 @@
     .btn-secondary { background: #f0f0f0; border: 1px solid #ddd; }
     .btn-danger { background: #ffebee; color: #f44336; border: 1px solid #ffcdd2; }
 
-    /* Sorteio */
-    .sorteio-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
-    .sorteio-item { background: #fafafa; border: 1px solid #ddd; border-radius: 8px; padding: 10px; cursor: pointer; margin-bottom: 8px; }
-    .sorteio-item.selected { border: 2px solid #007AFF; background: #e3f2fd; }
-    .sorteio-item-name { font-weight: 500; font-size: 13px; }
-    .sorteio-item-pts { font-size: 11px; color: #999; margin-top: 2px; }
+    /* Sorteio / definição dos classificados */
+    .sorteio-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .sorteio-grupo { background: #fafafa; border: 1px solid #ddd; border-radius: 8px; padding: 12px; }
+    .sorteio-grupo h4 { margin: 0 0 10px 0; font-size: 13px; }
+    .sorteio-label { font-size: 11px; color: #999; font-weight: 600; text-transform: uppercase; display: block; margin-bottom: 4px; }
+    .sorteio-select { width: 100%; padding: 9px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; background: white; margin-bottom: 10px; }
+    .sorteio-select.seed { border-color: #007AFF; font-weight: 600; }
+    .ranking-mini { font-size: 11px; color: #999; line-height: 1.5; margin: 6px 0 0 0; }
+    .check-linha { display: flex; align-items: flex-start; gap: 8px; margin-top: 14px; font-size: 13px; color: #555; }
+    .check-linha input { margin-top: 2px; }
 
-    /* Fase 2 */
-    .fase2-grupos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-    .fase2-grupo { background: white; border: 1px solid #ddd; border-radius: 12px; padding: 16px; }
-    .fase2-grupo h4 { margin: 0 0 12px 0; font-size: 14px; }
-    .badge-g1 { background: #6a4de0; color: white; padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: 600; }
-    .badge-g2 { background: #e07a4d; color: white; padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+    .badge-seed { background: #007AFF; color: white; padding: 2px 6px; border-radius: 3px; font-size: 10px; font-weight: 700; }
+    .badge-dois { background: #eee; color: #777; padding: 2px 6px; border-radius: 3px; font-size: 10px; font-weight: 700; }
 
     /* Chave */
+    .formato-aviso { background: #f0f7ff; border: 1px solid #b6d9ff; border-radius: 8px; padding: 12px; font-size: 12px; color: #31557a; line-height: 1.6; margin-bottom: 16px; }
     .chave { display: flex; gap: 16px; overflow-x: auto; padding: 4px 0 12px 0; }
-    .chave-col { min-width: 250px; flex: 1; }
+    .chave-col { min-width: 260px; flex: 1; }
     .chave-titulo { font-weight: 600; font-size: 12px; color: #999; margin-bottom: 12px; text-transform: uppercase; }
     .confronto { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 12px; margin-bottom: 12px; }
     .confronto.vazio { background: #fafafa; border-style: dashed; color: #aaa; }
     .confronto.decidido { background: #e8f5e9; border-color: #a5d6a7; }
+    .confronto-rotulo { font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
     .lado { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 4px 0; font-size: 13px; }
     .lado.vencedor { font-weight: 700; color: #2e7d32; }
     .lado .placar { font-weight: 700; font-size: 14px; min-width: 22px; text-align: right; }
@@ -125,6 +128,18 @@
     .linha-vs { border-top: 1px solid #eee; margin: 4px 0; }
     .aguardando { font-size: 12px; color: #aaa; font-style: italic; padding: 8px 0; }
     .campeao { background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 16px; text-align: center; font-size: 16px; font-weight: 700; color: #f57f17; }
+
+    /* Sets (semis e final) */
+    .sets-head { display: flex; gap: 6px; font-size: 10px; color: #999; text-transform: uppercase; justify-content: flex-end; margin-bottom: 2px; }
+    .sets-head span { width: 28px; text-align: center; }
+    .sets-placar { display: flex; gap: 6px; }
+    .sets-placar span { width: 28px; text-align: center; font-weight: 700; font-size: 14px; }
+    .sets-total { min-width: 26px; text-align: right; font-weight: 700; font-size: 14px; color: #2e7d32; }
+    .set-edit { display: flex; align-items: center; gap: 6px; margin-top: 6px; }
+    .set-edit label { font-size: 11px; color: #999; width: 44px; }
+    .set-edit input { flex: 1; padding: 8px; border: 2px solid #ddd; border-radius: 6px; font-size: 15px; font-weight: 600; text-align: center; min-width: 0; }
+    .set-edit input:focus { border-color: #007AFF; outline: none; }
+    .set-edit .x { font-size: 11px; color: #bbb; }
   </style>
 </head>
 <body>
@@ -150,6 +165,18 @@
 
 const SENHAS_ADMIN = ['lucaseleticia123', 'tatu123cup'];
 const CAMINHO = 'tatucup5';
+
+/* versão do formato da 2ª fase gravado no banco.
+   Mudou de "2 grupos de 4" para "quartas com cabeça de chave". */
+const FORMATO_FASE2 = 2;
+
+/* quartas: quem chega primeiro a esta pontuação vence */
+const PONTOS_QUARTAS = 10;
+
+/* semis e final: melhor de N sets */
+const SETS_SERIE = 3;          /* melhor de 3 */
+const SETS_PARA_VENCER = 2;    /* precisa levar 2 sets */
+const GAMES_SET = 6;           /* set vai até 6 games */
 
 const GRUPOS = {
   'A': [
@@ -178,10 +205,12 @@ const GRUPOS = {
   ]
 };
 
+const LETRAS = Object.keys(GRUPOS);
+
 /* ===================== ESTADO ===================== */
 
 let BASE_URL = null;
-let DADOS = { matches: [], fase2: null };
+let DADOS = { matches: [], fase2: null, fase2Legado: false };
 let syncStatus = 'ok';
 
 function urlDados() { return BASE_URL.replace(/\/+$/, '') + '/' + CAMINHO + '.json'; }
@@ -199,23 +228,79 @@ function gerarJogos(grupo) {
 
 function chaveJogo(grupo, p1, p2) { return grupo + '|' + p1 + '|' + p2; }
 
+/* ---- normalização do que vem do banco ---------------------------------
+   O Firebase remove chaves com valor null, então tudo que for opcional
+   precisa ser reconstruído aqui com um default seguro. */
+function completarFase2(f2) {
+  const quartas = [];
+  for (let i = 0; i < 4; i++) {
+    const c = (f2.quartas && f2.quartas[i]) || {};
+    quartas.push({
+      p1: c.p1 || null,
+      p2: c.p2 || null,
+      s1: c.s1 == null ? null : c.s1,
+      s2: c.s2 == null ? null : c.s2
+    });
+  }
+  const semis = [0, 1].map(i => ({
+    sets: ((f2.semis && f2.semis[i] && f2.semis[i].sets) || []).filter(Boolean)
+  }));
+  const final = { sets: ((f2.final && f2.final.sets) || []).filter(Boolean) };
+  return { versao: FORMATO_FASE2, quartas, semis, final };
+}
+
 function normalizar(json) {
+  const bruto = json && json.fase2;
+  const valido = bruto && bruto.versao === FORMATO_FASE2;
   return {
     matches: (json && json.matches) || [],
-    fase2: (json && json.fase2) || null
+    fase2: valido ? completarFase2(bruto) : null,
+    fase2Legado: !!(bruto && !valido)
   };
 }
 
-/* vencedor de um confronto da fase 2 */
-function vencedorDe(c) {
-  if (!c || c.s1 == null || c.s2 == null) return null;
+/* ---- vencedores -------------------------------------------------------- */
+
+/* quartas: pontos corridos */
+function vencedorPontos(c) {
+  if (!c || !c.p1 || !c.p2) return null;
+  if (c.s1 == null || c.s2 == null) return null;
   if (c.s1 === c.s2) return null;
   return c.s1 > c.s2 ? c.p1 : c.p2;
 }
 
-function nomeCompleto(j) {
-  if (!j) return null;
-  return j.nome;
+/* semis e final: melhor de 3 sets */
+function contarSets(sets) {
+  let a = 0, b = 0;
+  (sets || []).forEach(s => {
+    if (!s || s.g1 == null || s.g2 == null) return;
+    if (s.g1 > s.g2) a++; else if (s.g2 > s.g1) b++;
+  });
+  return { a, b };
+}
+
+function vencedorSerie(c) {
+  if (!c || !c.p1 || !c.p2) return null;
+  const { a, b } = contarSets(c.sets);
+  if (a >= SETS_PARA_VENCER && a > b) return c.p1;
+  if (b >= SETS_PARA_VENCER && b > a) return c.p2;
+  return null;
+}
+
+function mesmoJogador(x, y) {
+  if (!x || !y) return false;
+  return x.nome === y.nome && x.grupo === y.grupo;
+}
+
+/* valida um set isolado. Retorna null se ok, ou a mensagem de erro. */
+function validarSet(g1, g2) {
+  if (g1 < 0 || g2 < 0) return 'games não podem ser negativos';
+  if (g1 === g2) return 'um set não termina empatado';
+  const max = Math.max(g1, g2), min = Math.min(g1, g2);
+  if (max < GAMES_SET) return 'o set só fecha com pelo menos ' + GAMES_SET + ' games';
+  if (max === GAMES_SET && min > GAMES_SET - 2) return GAMES_SET + '-' + min + ' não fecha o set (precisa de 2 games de vantagem)';
+  if (max === GAMES_SET + 1 && min < GAMES_SET - 1) return 'com ' + (GAMES_SET + 1) + ' games o placar só pode ser ' + (GAMES_SET + 1) + '-' + (GAMES_SET - 1) + ' ou ' + (GAMES_SET + 1) + '-' + GAMES_SET;
+  return null;
 }
 
 /* ===================== REDE ===================== */
@@ -241,7 +326,7 @@ async function salvarDados() {
     const r = await fetch(urlDados(), {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(DADOS)
+      body: JSON.stringify({ matches: DADOS.matches, fase2: DADOS.fase2 })
     });
     if (!r.ok) throw new Error('HTTP ' + r.status);
     setSync('ok');
@@ -312,7 +397,7 @@ function renderApp() {
         <button class="tab-button active" onclick="app.switchTab('grupos', this)">📊 Grupos</button>
         <button class="tab-button" onclick="app.switchTab('jogos', this)">🎾 Jogos</button>
         <button class="tab-button" onclick="app.switchTab('partidas', this)">📋 Partidas</button>
-        <button class="tab-button" onclick="app.switchTab('sorteio', this)">🎲 2ª Fase</button>
+        <button class="tab-button" onclick="app.switchTab('sorteio', this)">🎲 Quartas</button>
         <button class="tab-button" onclick="app.switchTab('quadro', this)">🏆 Chave</button>
         <button class="tab-button" onclick="app.switchTab('compartilhar', this)">🔗 Link</button>
       </div>
@@ -330,7 +415,6 @@ function renderApp() {
 
 const app = {
   abaAtual: 'grupos',
-  selecionados: null,
 
   /* ---------- setup ---------- */
   async conectar() {
@@ -404,7 +488,7 @@ const app = {
   calcRanking(grupo) {
     const stats = {};
     GRUPOS[grupo].forEach(p => {
-      stats[p.nome] = { ...p, grupo, wins: 0, points: 0, setsGanhos: 0, setsPerdidos: 0 };
+      stats[p.nome] = { ...p, grupo, wins: 0, points: 0, setsGanhos: 0, setsPerdidos: 0, jogos: 0 };
     });
 
     DADOS.matches.filter(m => m.grupo === grupo).forEach(m => {
@@ -414,6 +498,8 @@ const app = {
       stats[m.player1].setsPerdidos += s2;
       stats[m.player2].setsGanhos += s2;
       stats[m.player2].setsPerdidos += s1;
+      stats[m.player1].jogos++;
+      stats[m.player2].jogos++;
       if (s1 > s2) { stats[m.player1].wins++; stats[m.player1].points += 3; }
       else if (s2 > s1) { stats[m.player2].wins++; stats[m.player2].points += 3; }
     });
@@ -425,13 +511,28 @@ const app = {
     );
   },
 
+  /* quantos jogos do grupo ainda faltam */
+  faltamNoGrupo(grupo) {
+    const total = gerarJogos(grupo).length;
+    const feitos = DADOS.matches.filter(m => m.grupo === grupo).length;
+    return total - feitos;
+  },
+
+  faltamTotal() {
+    return LETRAS.reduce((acc, g) => acc + this.faltamNoGrupo(g), 0);
+  },
+
   renderGrupos() {
     let html = '<div class="grupos-grid">';
-    Object.keys(GRUPOS).forEach(grupo => {
+    LETRAS.forEach(grupo => {
       const ranking = this.calcRanking(grupo);
+      const faltam = this.faltamNoGrupo(grupo);
       html += `
         <div class="grupo-card">
-          <div class="grupo-header"><span class="grupo-badge">GRUPO ${grupo}</span></div>
+          <div class="grupo-header">
+            <span class="grupo-badge">GRUPO ${grupo}</span>
+            <span style="font-size:11px;color:#999;margin-left:8px;">${faltam === 0 ? '✓ encerrado' : faltam + ' jogo(s) a fazer'}</span>
+          </div>
           <table class="ranking-table">
             <thead><tr><th>Pos</th><th>Jogador</th><th>V</th><th>Pts</th><th>SG</th><th>SP</th><th>Saldo</th></tr></thead>
             <tbody>
@@ -461,7 +562,7 @@ const app = {
     const isAdmin = this.isAdmin();
     let html = '';
 
-    Object.keys(GRUPOS).forEach(grupo => {
+    LETRAS.forEach(grupo => {
       const jogos = gerarJogos(grupo);
       html += `<div class="jogo-grupo"><h3><span class="grupo-badge">GRUPO ${grupo}</span> &nbsp;${jogos.length} partidas</h3><div class="rodada-games">`;
 
@@ -539,183 +640,275 @@ const app = {
       </div>`;
   },
 
-  /* ---------- 2ª fase: seleção e sorteio ---------- */
-  classificadosPadrao() {
-    const out = [];
-    Object.keys(GRUPOS).forEach(g => {
-      this.calcRanking(g).slice(0, 2).forEach(p => out.push({ nome: p.nome, clube: p.clube, grupo: g }));
-    });
-    return out;
-  },
-
-  idJogador(j) { return j.grupo + '|' + j.nome; },
+  /* =================================================================
+     QUARTAS DE FINAL — definição dos classificados e sorteio
+     1º de cada grupo = cabeça de chave (fica fixo na sua posição)
+     2º de cada grupo = sorteado contra um dos cabeças
+     ================================================================= */
 
   renderSorteio() {
     const isAdmin = this.isAdmin();
     const f2 = DADOS.fase2;
+    const faltam = this.faltamTotal();
     let html = '';
 
+    if (DADOS.fase2Legado) {
+      html += `<div class="section-card"><div class="alert-modal alert-warn">
+        ⚠️ Havia um chaveamento gravado no formato antigo (dois grupos de 4). Ele foi ignorado porque o formato mudou para quartas de final. Faça o sorteio novamente abaixo.
+      </div></div>`;
+    }
+
     if (f2) {
-      html = `<div class="section-card">
-        <h3>✓ Grupos da 2ª fase definidos</h3>
-        <div class="fase2-grupos">
-          ${f2.grupos.map((g, gi) => `
-            <div class="fase2-grupo">
-              <h4><span class="${gi === 0 ? 'badge-g1' : 'badge-g2'}">GRUPO ${gi + 1}</span></h4>
-              ${g.confrontos.map((c, ci) => `
-                <div style="padding:8px 0;border-bottom:1px solid #eee;font-size:13px;">
-                  <strong>Confronto ${ci + 1}</strong><br>
-                  ${c.p1.nome} <span style="color:#999;">x</span> ${c.p2.nome}
-                </div>`).join('')}
-              <p style="font-size:12px;color:#666;margin-top:10px;">Os dois vencedores fazem a Semifinal ${gi + 1}.</p>
+      html += `<div class="section-card">
+        <h3>✓ Quartas de final sorteadas</h3>
+        <div class="sorteio-cols">
+          ${f2.quartas.map((c, i) => `
+            <div class="sorteio-grupo">
+              <h4>Quartas ${i + 1}</h4>
+              <div style="font-size:13px;line-height:1.8;">
+                <span class="badge-seed">${c.p1 ? c.p1.rot : '?'}</span> ${c.p1 ? c.p1.nome : '-'}<br>
+                <span style="color:#999;font-size:12px;">versus</span><br>
+                <span class="badge-dois">${c.p2 ? c.p2.rot : '?'}</span> ${c.p2 ? c.p2.nome : '-'}
+              </div>
             </div>`).join('')}
         </div>
-        <p style="font-size:13px;color:#666;margin-top:16px;">Os placares são registrados na aba <strong>🏆 Chave</strong>.</p>
-        ${isAdmin ? '<button class="btn btn-danger" style="margin-top:8px;" onclick="app.resetarFase2()">Refazer sorteio da 2ª fase</button>' : ''}
+        <p style="font-size:13px;color:#666;margin-top:16px;">
+          Vencedores de <strong>Quartas 1 e 2</strong> fazem a Semifinal 1.<br>
+          Vencedores de <strong>Quartas 3 e 4</strong> fazem a Semifinal 2.<br>
+          Os placares são registrados na aba <strong>🏆 Chave</strong>.
+        </p>
+        ${isAdmin ? '<button class="btn btn-danger" style="margin-top:8px;" onclick="app.resetarFase2()">Refazer o sorteio das quartas</button>' : ''}
       </div>`;
-    } else if (isAdmin) {
-      if (!this.selecionados) this.selecionados = this.classificadosPadrao().map(j => this.idJogador(j));
-
-      html = `<div class="section-card">
-        <h3>🎲 Sorteio da 2ª fase</h3>
-        <p style="color:#666;font-size:13px;line-height:1.5;">Os dois primeiros de cada grupo já vêm marcados automaticamente. Toque para ajustar se houver empate ou desistência. Selecionados: <strong>${this.selecionados.length}/8</strong></p>
-        <div class="sorteio-cols">`;
-
-      Object.keys(GRUPOS).forEach(grupo => {
-        html += `<div><div style="font-size:12px;color:#999;margin-bottom:8px;font-weight:600;">Grupo ${grupo}</div>`;
-        this.calcRanking(grupo).forEach((p, i) => {
-          const id = grupo + '|' + p.nome;
-          const sel = this.selecionados.includes(id);
-          html += `<div class="sorteio-item ${sel ? 'selected' : ''}" onclick="app.toggleClassificado('${grupo}','${p.nome.replace(/'/g, "\\'")}')">
-            <div class="sorteio-item-name">${i + 1}º ${p.nome}</div>
-            <div class="sorteio-item-pts">${p.points} pts • saldo ${p.setsGanhos - p.setsPerdidos}</div>
-          </div>`;
-        });
-        html += '</div>';
-      });
-
-      html += `</div>
-        <button class="btn btn-primary" style="margin-top:16px;width:100%;padding:14px;" onclick="app.sortearFase2()">Sortear os 2 grupos</button>
-        <p style="font-size:12px;color:#999;margin-top:10px;">O sistema embaralha os 8 e monta os dois grupos de 4, já definindo os confrontos.</p>
-      </div>`;
-    } else {
-      html = '<div class="section-card"><p style="color:#999;text-align:center;padding:20px;">A 2ª fase começa quando a fase de grupos terminar.</p></div>';
+      document.getElementById('sorteio').innerHTML = html;
+      return;
     }
+
+    if (!isAdmin) {
+      html += '<div class="section-card"><p style="color:#999;text-align:center;padding:20px;">As quartas de final aparecem aqui quando a fase de grupos terminar.</p></div>';
+      document.getElementById('sorteio').innerHTML = html;
+      return;
+    }
+
+    html += `<div class="section-card">
+      <h3>🎲 Sorteio das quartas de final</h3>
+      ${faltam > 0 ? `<div class="alert-modal alert-warn">⚠️ Ainda faltam <strong>${faltam} jogo(s)</strong> na fase de grupos. Dá para sortear mesmo assim, mas a classificação ainda pode mudar.</div>` : ''}
+      <p style="color:#666;font-size:13px;line-height:1.5;">
+        O <strong>1º de cada grupo é cabeça de chave</strong> e ocupa uma posição fixa. Os <strong>2º colocados são sorteados</strong> entre os quatro cabeças.
+        Os campos já vêm preenchidos pela classificação atual — ajuste à mão se houver empate técnico ou desistência.
+      </p>
+      <div class="sorteio-cols">`;
+
+    LETRAS.forEach(grupo => {
+      const ranking = this.calcRanking(grupo);
+      const opcoes = (sel) => GRUPOS[grupo].map(p =>
+        `<option value="${p.nome}" ${p.nome === sel ? 'selected' : ''}>${p.nome}</option>`).join('');
+      html += `
+        <div class="sorteio-grupo">
+          <h4><span class="grupo-badge">GRUPO ${grupo}</span></h4>
+          <span class="sorteio-label">1º — cabeça de chave</span>
+          <select class="sorteio-select seed" id="sel-1-${grupo}">${opcoes(ranking[0] && ranking[0].nome)}</select>
+          <span class="sorteio-label">2º colocado</span>
+          <select class="sorteio-select" id="sel-2-${grupo}">${opcoes(ranking[1] && ranking[1].nome)}</select>
+          <p class="ranking-mini">${ranking.map((p, i) => `${i + 1}º ${p.nome} — ${p.points} pts, saldo ${p.setsGanhos - p.setsPerdidos}`).join('<br>')}</p>
+        </div>`;
+    });
+
+    html += `</div>
+      <label class="check-linha">
+        <input type="checkbox" id="evitarMesmoGrupo" checked />
+        <span>Evitar que o 2º colocado caia contra o 1º do próprio grupo (evita reencontro da fase de grupos).</span>
+      </label>
+      <button class="btn btn-primary" style="margin-top:16px;width:100%;padding:14px;" onclick="app.sortearQuartas()">🎲 Sortear as quartas de final</button>
+      <p style="font-size:12px;color:#999;margin-top:10px;">
+        Formato: quartas até ${PONTOS_QUARTAS} pontos • semis e final em melhor de ${SETS_SERIE} sets de ${GAMES_SET} games.
+      </p>
+    </div>`;
 
     document.getElementById('sorteio').innerHTML = html;
   },
 
-  toggleClassificado(grupo, nome) {
-    const id = grupo + '|' + nome;
-    const i = this.selecionados.indexOf(id);
-    if (i >= 0) this.selecionados.splice(i, 1);
-    else if (this.selecionados.length < 8) this.selecionados.push(id);
-    else { alert('Já são 8 selecionados. Desmarque alguém antes.'); return; }
-    this.renderSorteio();
+  lerEscolhas() {
+    const cabecas = [], segundos = [];
+    for (const grupo of LETRAS) {
+      const n1 = document.getElementById('sel-1-' + grupo).value;
+      const n2 = document.getElementById('sel-2-' + grupo).value;
+      if (n1 === n2) { alert('No Grupo ' + grupo + ' o 1º e o 2º colocado são a mesma pessoa. Corrija antes de sortear.'); return null; }
+      const p1 = GRUPOS[grupo].find(p => p.nome === n1);
+      const p2 = GRUPOS[grupo].find(p => p.nome === n2);
+      cabecas.push({ nome: n1, clube: p1 ? p1.clube : '', grupo, pos: 1, rot: '1º ' + grupo });
+      segundos.push({ nome: n2, clube: p2 ? p2.clube : '', grupo, pos: 2, rot: '2º ' + grupo });
+    }
+    return { cabecas, segundos };
   },
 
-  async sortearFase2() {
-    if (this.selecionados.length !== 8) { alert('Selecione exatamente 8 jogadores.'); return; }
-    if (!confirm('Sortear os grupos da 2ª fase? Isso define os confrontos.')) return;
+  async sortearQuartas() {
+    const esc = this.lerEscolhas();
+    if (!esc) return;
+    const evitar = document.getElementById('evitarMesmoGrupo').checked;
 
-    // monta objetos completos
-    const lista = this.selecionados.map(id => {
-      const [g, nome] = id.split('|');
-      const p = GRUPOS[g].find(x => x.nome === nome);
-      return { nome, clube: p ? p.clube : '', grupo: g };
-    });
+    if (!confirm('Sortear as quartas de final? Isso define os quatro confrontos.')) return;
 
-    // embaralha (Fisher-Yates)
-    for (let i = lista.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [lista[i], lista[j]] = [lista[j], lista[i]];
+    const embaralhar = (arr) => {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    };
+
+    let sorteados = embaralhar(esc.segundos);
+    if (evitar) {
+      let ok = false;
+      for (let t = 0; t < 500 && !ok; t++) {
+        sorteados = embaralhar(esc.segundos);
+        ok = sorteados.every((s, i) => s.grupo !== esc.cabecas[i].grupo);
+      }
+      if (!ok) {
+        // combinação válida sempre existe com 4 grupos distintos, mas se algo
+        // fugir do esperado, corrige por troca em vez de travar o sorteio.
+        for (let i = 0; i < sorteados.length; i++) {
+          if (sorteados[i].grupo === esc.cabecas[i].grupo) {
+            const j = (i + 1) % sorteados.length;
+            [sorteados[i], sorteados[j]] = [sorteados[j], sorteados[i]];
+          }
+        }
+      }
     }
 
     const fase2 = {
-      grupos: [
-        { confrontos: [
-          { p1: lista[0], p2: lista[1], s1: null, s2: null },
-          { p1: lista[2], p2: lista[3], s1: null, s2: null }
-        ]},
-        { confrontos: [
-          { p1: lista[4], p2: lista[5], s1: null, s2: null },
-          { p1: lista[6], p2: lista[7], s1: null, s2: null }
-        ]}
-      ],
-      semis: [ { s1: null, s2: null }, { s1: null, s2: null } ],
-      final: { s1: null, s2: null }
+      versao: FORMATO_FASE2,
+      quartas: esc.cabecas.map((c, i) => ({ p1: c, p2: sorteados[i], s1: null, s2: null })),
+      semis: [{ sets: [] }, { sets: [] }],
+      final: { sets: [] }
     };
 
     await carregarDados();
     DADOS.fase2 = fase2;
     await salvarDados();
-    this.selecionados = null;
-    this.renderAtual();
+    this.abaAtual = 'quadro';
+    renderApp();
+    document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(b => b.classList.remove('active'));
+    document.getElementById('quadro').classList.add('active');
+    const btns = document.querySelectorAll('.tab-button');
+    if (btns[4]) btns[4].classList.add('active');
+    this.renderQuadro();
   },
 
   async resetarFase2() {
-    if (!confirm('Refazer o sorteio? Todos os resultados da 2ª fase, semifinais e final serão apagados.')) return;
+    if (!confirm('Refazer o sorteio? Todos os resultados das quartas, semifinais e final serão apagados.')) return;
     await carregarDados();
     DADOS.fase2 = null;
     await salvarDados();
-    this.selecionados = null;
     this.renderAtual();
   },
 
-  /* ---------- chave ---------- */
-  semifinalistas(gi) {
-    const g = DADOS.fase2.grupos[gi];
-    return { p1: vencedorDe(g.confrontos[0]), p2: vencedorDe(g.confrontos[1]) };
+  /* =================================================================
+     CHAVE
+     ================================================================= */
+
+  semifinalistas() {
+    const q = DADOS.fase2.quartas;
+    return [
+      { p1: vencedorPontos(q[0]), p2: vencedorPontos(q[1]) },
+      { p1: vencedorPontos(q[2]), p2: vencedorPontos(q[3]) }
+    ];
   },
 
   finalistas() {
     const f2 = DADOS.fase2;
-    const out = [];
-    for (let i = 0; i < 2; i++) {
-      const sf = this.semifinalistas(i);
-      const s = f2.semis[i];
-      if (!sf.p1 || !sf.p2) { out.push(null); continue; }
-      out.push(vencedorDe({ p1: sf.p1, p2: sf.p2, s1: s.s1, s2: s.s2 }));
-    }
-    return out;
+    const sf = this.semifinalistas();
+    return [0, 1].map(i => vencedorSerie({ p1: sf[i].p1, p2: sf[i].p2, sets: f2.semis[i].sets }));
   },
 
   campeao() {
     const f = this.finalistas();
-    if (!f[0] || !f[1]) return null;
-    return vencedorDe({ p1: f[0], p2: f[1], s1: DADOS.fase2.final.s1, s2: DADOS.fase2.final.s2 });
+    return vencedorSerie({ p1: f[0], p2: f[1], sets: DADOS.fase2.final.sets });
   },
 
-  boxConfronto(key, p1, p2, s1, s2, rotulo) {
+  /* caixa de confronto por pontos corridos (quartas) */
+  boxPontos(key, c, rotulo) {
     const isAdmin = this.isAdmin();
-    if (!p1 || !p2) {
-      return `<div class="confronto vazio">
-        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">${rotulo}</div>
-        <div class="aguardando">Aguardando os resultados anteriores</div>
-      </div>`;
-    }
-    const venc = vencedorDe({ p1, p2, s1, s2 });
-    const decidido = !!venc;
+    if (!c || !c.p1 || !c.p2) return this.boxVazio(rotulo);
+    const venc = vencedorPontos(c);
 
-    return `<div class="confronto ${decidido ? 'decidido' : ''}" data-c="${key}">
-      <div style="font-size:11px;color:#999;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">${rotulo}</div>
-      <div class="lado ${venc === p1 ? 'vencedor' : ''}">
-        <span class="lado-nome">${p1.nome}<small>${p1.clube || ''}</small></span>
-        <span class="placar">${s1 == null ? '–' : s1}</span>
+    return `<div class="confronto ${venc ? 'decidido' : ''}" data-c="${key}">
+      <div class="confronto-rotulo">${rotulo} — até ${PONTOS_QUARTAS} pontos</div>
+      <div class="lado ${mesmoJogador(venc, c.p1) ? 'vencedor' : ''}">
+        <span class="lado-nome">${c.p1.nome}<small>${c.p1.rot ? c.p1.rot + ' • ' : ''}${c.p1.clube || ''}</small></span>
+        <span class="placar">${c.s1 == null ? '–' : c.s1}</span>
       </div>
       <div class="linha-vs"></div>
-      <div class="lado ${venc === p2 ? 'vencedor' : ''}">
-        <span class="lado-nome">${p2.nome}<small>${p2.clube || ''}</small></span>
-        <span class="placar">${s2 == null ? '–' : s2}</span>
+      <div class="lado ${mesmoJogador(venc, c.p2) ? 'vencedor' : ''}">
+        <span class="lado-nome">${c.p2.nome}<small>${c.p2.rot ? c.p2.rot + ' • ' : ''}${c.p2.clube || ''}</small></span>
+        <span class="placar">${c.s2 == null ? '–' : c.s2}</span>
       </div>
       ${isAdmin ? `
         <div class="placar-container" style="margin-top:10px;">
-          <input type="number" inputmode="numeric" class="placar-input c-s1" value="${s1 == null ? '' : s1}" placeholder="0" min="0" />
+          <input type="number" inputmode="numeric" class="placar-input c-s1" value="${c.s1 == null ? '' : c.s1}" placeholder="0" min="0" />
           <div class="placar-vs-texto">x</div>
-          <input type="number" inputmode="numeric" class="placar-input c-s2" value="${s2 == null ? '' : s2}" placeholder="0" min="0" />
+          <input type="number" inputmode="numeric" class="placar-input c-s2" value="${c.s2 == null ? '' : c.s2}" placeholder="0" min="0" />
         </div>
-        <button class="btn btn-primary" style="width:100%;margin-top:8px;" onclick="app.salvarConfronto('${key}')">${decidido ? 'Atualizar' : 'Registrar'}</button>
+        <button class="btn btn-primary" style="width:100%;margin-top:8px;" onclick="app.salvarQuarta('${key}')">${venc ? 'Atualizar' : 'Registrar'}</button>
       ` : ''}
+    </div>`;
+  },
+
+  /* caixa de confronto em sets (semis e final) */
+  boxSets(key, p1, p2, sets, rotulo) {
+    const isAdmin = this.isAdmin();
+    if (!p1 || !p2) return this.boxVazio(rotulo);
+
+    const venc = vencedorSerie({ p1, p2, sets });
+    const tot = contarSets(sets);
+    const cel = (lado) => {
+      let out = '';
+      for (let i = 0; i < SETS_SERIE; i++) {
+        const s = sets && sets[i];
+        const v = !s ? '–' : (lado === 1 ? s.g1 : s.g2);
+        out += `<span>${v}</span>`;
+      }
+      return out;
+    };
+
+    let edicao = '';
+    if (isAdmin) {
+      edicao = '<div style="margin-top:10px;border-top:1px solid #eee;padding-top:8px;">';
+      for (let i = 0; i < SETS_SERIE; i++) {
+        const s = sets && sets[i];
+        edicao += `<div class="set-edit">
+          <label>Set ${i + 1}</label>
+          <input type="number" inputmode="numeric" class="set-g1-${i}" value="${s ? s.g1 : ''}" placeholder="–" min="0" />
+          <span class="x">x</span>
+          <input type="number" inputmode="numeric" class="set-g2-${i}" value="${s ? s.g2 : ''}" placeholder="–" min="0" />
+        </div>`;
+      }
+      edicao += `<button class="btn btn-primary" style="width:100%;margin-top:10px;" onclick="app.salvarSerie('${key}')">${venc ? 'Atualizar' : 'Registrar'}</button>
+        <p style="font-size:11px;color:#999;margin:6px 0 0 0;">Deixe o Set 3 em branco se a partida acabar em 2 a 0.</p>
+      </div>`;
+    }
+
+    return `<div class="confronto ${venc ? 'decidido' : ''}" data-c="${key}">
+      <div class="confronto-rotulo">${rotulo} — melhor de ${SETS_SERIE} sets</div>
+      <div class="sets-head">${Array.from({ length: SETS_SERIE }, (_, i) => `<span>S${i + 1}</span>`).join('')}<span style="width:26px;">Sets</span></div>
+      <div class="lado ${mesmoJogador(venc, p1) ? 'vencedor' : ''}">
+        <span class="lado-nome">${p1.nome}<small>${p1.rot ? p1.rot + ' • ' : ''}${p1.clube || ''}</small></span>
+        <span class="sets-placar">${cel(1)}</span><span class="sets-total">${tot.a}</span>
+      </div>
+      <div class="linha-vs"></div>
+      <div class="lado ${mesmoJogador(venc, p2) ? 'vencedor' : ''}">
+        <span class="lado-nome">${p2.nome}<small>${p2.rot ? p2.rot + ' • ' : ''}${p2.clube || ''}</small></span>
+        <span class="sets-placar">${cel(2)}</span><span class="sets-total">${tot.b}</span>
+      </div>
+      ${edicao}
+    </div>`;
+  },
+
+  boxVazio(rotulo) {
+    return `<div class="confronto vazio">
+      <div class="confronto-rotulo">${rotulo}</div>
+      <div class="aguardando">Aguardando os resultados anteriores</div>
     </div>`;
   },
 
@@ -723,88 +916,145 @@ const app = {
     const f2 = DADOS.fase2;
     const el = document.getElementById('quadro');
 
+    const aviso = `<div class="formato-aviso">
+      <strong>Formato da fase final</strong><br>
+      • <strong>Quartas de final:</strong> pontos corridos — quem chegar a <strong>${PONTOS_QUARTAS} pontos</strong> primeiro vence.<br>
+      • <strong>Semifinais e final:</strong> jogo de tênis em <strong>melhor de ${SETS_SERIE} sets</strong>, cada set até <strong>${GAMES_SET} games</strong>.
+    </div>`;
+
     if (!f2) {
       el.innerHTML = `<div class="section-card">
-        <h3>🏆 Chave da 2ª fase</h3>
-        <p style="color:#666;font-size:14px;line-height:1.6;">A chave aparece aqui assim que a fase de grupos terminar e o sorteio for feito na aba <strong>🎲 2ª Fase</strong>.</p>
+        <h3>🏆 Chave da fase final</h3>
+        ${aviso}
+        <p style="color:#666;font-size:14px;line-height:1.6;">A chave aparece aqui assim que o sorteio for feito na aba <strong>🎲 Quartas</strong>.</p>
         <div class="chave" style="margin-top:16px;opacity:0.55;">
           <div class="chave-col">
-            <div class="chave-titulo">Grupo 1</div>
-            ${this.boxConfronto('x', null, null, null, null, 'Confronto 1')}
-            ${this.boxConfronto('x', null, null, null, null, 'Confronto 2')}
-            <div class="chave-titulo" style="margin-top:16px;">Grupo 2</div>
-            ${this.boxConfronto('x', null, null, null, null, 'Confronto 3')}
-            ${this.boxConfronto('x', null, null, null, null, 'Confronto 4')}
+            <div class="chave-titulo">Quartas de final</div>
+            ${[1, 2, 3, 4].map(i => this.boxVazio('Quartas ' + i)).join('')}
           </div>
           <div class="chave-col">
             <div class="chave-titulo">Semifinais</div>
-            ${this.boxConfronto('x', null, null, null, null, 'Semifinal 1')}
-            ${this.boxConfronto('x', null, null, null, null, 'Semifinal 2')}
+            ${this.boxVazio('Semifinal 1')}
+            ${this.boxVazio('Semifinal 2')}
           </div>
           <div class="chave-col">
             <div class="chave-titulo">Final</div>
-            ${this.boxConfronto('x', null, null, null, null, 'Final')}
+            ${this.boxVazio('Final')}
           </div>
         </div>
       </div>`;
       return;
     }
 
-    const sf0 = this.semifinalistas(0);
-    const sf1 = this.semifinalistas(1);
+    const sf = this.semifinalistas();
     const fin = this.finalistas();
     const camp = this.campeao();
 
     el.innerHTML = `
+      ${aviso}
       <div class="chave">
         <div class="chave-col">
-          <div class="chave-titulo"><span class="badge-g1">GRUPO 1</span></div>
-          ${this.boxConfronto('g0c0', f2.grupos[0].confrontos[0].p1, f2.grupos[0].confrontos[0].p2, f2.grupos[0].confrontos[0].s1, f2.grupos[0].confrontos[0].s2, 'Confronto 1')}
-          ${this.boxConfronto('g0c1', f2.grupos[0].confrontos[1].p1, f2.grupos[0].confrontos[1].p2, f2.grupos[0].confrontos[1].s1, f2.grupos[0].confrontos[1].s2, 'Confronto 2')}
-          <div class="chave-titulo" style="margin-top:20px;"><span class="badge-g2">GRUPO 2</span></div>
-          ${this.boxConfronto('g1c0', f2.grupos[1].confrontos[0].p1, f2.grupos[1].confrontos[0].p2, f2.grupos[1].confrontos[0].s1, f2.grupos[1].confrontos[0].s2, 'Confronto 3')}
-          ${this.boxConfronto('g1c1', f2.grupos[1].confrontos[1].p1, f2.grupos[1].confrontos[1].p2, f2.grupos[1].confrontos[1].s1, f2.grupos[1].confrontos[1].s2, 'Confronto 4')}
+          <div class="chave-titulo">Quartas de final</div>
+          ${f2.quartas.map((c, i) => this.boxPontos('q' + i, c, 'Quartas ' + (i + 1))).join('')}
         </div>
 
         <div class="chave-col">
           <div class="chave-titulo">Semifinais</div>
-          ${this.boxConfronto('sf0', sf0.p1, sf0.p2, f2.semis[0].s1, f2.semis[0].s2, 'Semifinal 1 — Grupo 1')}
-          ${this.boxConfronto('sf1', sf1.p1, sf1.p2, f2.semis[1].s1, f2.semis[1].s2, 'Semifinal 2 — Grupo 2')}
+          ${this.boxSets('sf0', sf[0].p1, sf[0].p2, f2.semis[0].sets, 'Semifinal 1 — vencedores das Quartas 1 e 2')}
+          ${this.boxSets('sf1', sf[1].p1, sf[1].p2, f2.semis[1].sets, 'Semifinal 2 — vencedores das Quartas 3 e 4')}
         </div>
 
         <div class="chave-col">
           <div class="chave-titulo">Final</div>
-          ${this.boxConfronto('fin', fin[0], fin[1], f2.final.s1, f2.final.s2, 'Final')}
+          ${this.boxSets('fin', fin[0], fin[1], f2.final.sets, 'Final')}
           ${camp ? `<div class="campeao">🏆 ${camp.nome}<div style="font-size:12px;font-weight:400;color:#a1887f;margin-top:4px;">${camp.clube || ''}</div></div>` : ''}
         </div>
       </div>`;
   },
 
-  async salvarConfronto(key) {
+  /* ---------- gravação das quartas ---------- */
+  async salvarQuarta(key) {
     const card = document.querySelector(`[data-c="${key}"]`);
     const s1 = parseInt(card.querySelector('.c-s1').value);
     const s2 = parseInt(card.querySelector('.c-s2').value);
     if (isNaN(s1) || isNaN(s2)) { alert('Preencha os dois placares.'); return; }
     if (s1 === s2) { alert('O placar não pode empatar.'); return; }
+    if (s1 < 0 || s2 < 0) { alert('Os pontos não podem ser negativos.'); return; }
+    const max = Math.max(s1, s2);
+    if (max < PONTOS_QUARTAS) {
+      alert('A partida só termina quando alguém chega a ' + PONTOS_QUARTAS + ' pontos.');
+      return;
+    }
+
+    const i = parseInt(key.slice(1));
 
     await carregarDados();
     const f2 = DADOS.fase2;
-    if (!f2) { alert('O sorteio da 2ª fase ainda não foi feito.'); return; }
+    if (!f2) { alert('O sorteio das quartas ainda não foi feito.'); return; }
 
-    if (key === 'sf0') { f2.semis[0].s1 = s1; f2.semis[0].s2 = s2; }
-    else if (key === 'sf1') { f2.semis[1].s1 = s1; f2.semis[1].s2 = s2; }
-    else if (key === 'fin') { f2.final.s1 = s1; f2.final.s2 = s2; }
-    else {
-      const gi = parseInt(key[1]), ci = parseInt(key[3]);
-      const antes = vencedorDe(f2.grupos[gi].confrontos[ci]);
-      f2.grupos[gi].confrontos[ci].s1 = s1;
-      f2.grupos[gi].confrontos[ci].s2 = s2;
-      const depois = vencedorDe(f2.grupos[gi].confrontos[ci]);
-      // se trocou o vencedor, limpa a semifinal e a final afetadas
-      if (antes && depois && antes.nome !== depois.nome) {
-        f2.semis[gi] = { s1: null, s2: null };
-        f2.final = { s1: null, s2: null };
+    const antes = vencedorPontos(f2.quartas[i]);
+    f2.quartas[i].s1 = s1;
+    f2.quartas[i].s2 = s2;
+    const depois = vencedorPontos(f2.quartas[i]);
+
+    // integridade: se o vencedor mudou, zera a semi dependente e a final
+    if (antes && depois && !mesmoJogador(antes, depois)) {
+      const semi = i < 2 ? 0 : 1;
+      f2.semis[semi].sets = [];
+      f2.final.sets = [];
+    }
+
+    await salvarDados();
+    this.renderAtual();
+  },
+
+  /* ---------- gravação de semis e final (sets) ---------- */
+  async salvarSerie(key) {
+    const card = document.querySelector(`[data-c="${key}"]`);
+    const sets = [];
+
+    for (let i = 0; i < SETS_SERIE; i++) {
+      const v1 = card.querySelector('.set-g1-' + i).value.trim();
+      const v2 = card.querySelector('.set-g2-' + i).value.trim();
+      if (v1 === '' && v2 === '') { sets.push(null); continue; }
+      const g1 = parseInt(v1), g2 = parseInt(v2);
+      if (isNaN(g1) || isNaN(g2)) { alert('Set ' + (i + 1) + ': preencha os games dos dois jogadores.'); return; }
+      const erro = validarSet(g1, g2);
+      if (erro) { alert('Set ' + (i + 1) + ': ' + erro + '.'); return; }
+      sets.push({ g1, g2 });
+    }
+
+    if (!sets[0]) { alert('Preencha pelo menos o Set 1.'); return; }
+    if (!sets[1] && sets[2]) { alert('Preencha o Set 2 antes do Set 3.'); return; }
+
+    // não pode existir 3º set se alguém já fechou em 2 a 0
+    if (sets[2]) {
+      const parcial = contarSets([sets[0], sets[1]]);
+      if (parcial.a === 2 || parcial.b === 2) {
+        alert('A partida já terminou em 2 sets a 0. Apague o Set 3.');
+        return;
       }
+    }
+
+    // remove os sets vazios do fim para gravar limpo no Firebase
+    const limpos = sets.slice();
+    while (limpos.length && !limpos[limpos.length - 1]) limpos.pop();
+    if (limpos.some(s => !s)) { alert('Não deixe um set em branco no meio da partida.'); return; }
+
+    await carregarDados();
+    const f2 = DADOS.fase2;
+    if (!f2) { alert('O sorteio das quartas ainda não foi feito.'); return; }
+
+    const sf = this.semifinalistas();
+
+    if (key === 'sf0' || key === 'sf1') {
+      const idx = key === 'sf0' ? 0 : 1;
+      const antes = vencedorSerie({ p1: sf[idx].p1, p2: sf[idx].p2, sets: f2.semis[idx].sets });
+      f2.semis[idx].sets = limpos;
+      const depois = vencedorSerie({ p1: sf[idx].p1, p2: sf[idx].p2, sets: limpos });
+      if (antes && depois && !mesmoJogador(antes, depois)) f2.final.sets = [];
+    } else if (key === 'fin') {
+      f2.final.sets = limpos;
     }
 
     await salvarDados();
@@ -848,7 +1098,7 @@ window.app = app;
 
   setInterval(async () => {
     const el = document.activeElement;
-    if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA')) return;
+    if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT')) return;
     if (document.getElementById('adminModal').classList.contains('active')) return;
     const antes = JSON.stringify(DADOS);
     await carregarDados();
